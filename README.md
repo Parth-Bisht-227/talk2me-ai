@@ -22,10 +22,10 @@ Talk2Me AI is an empathetic, AI-powered web voice assistant designed to help use
 
 ## 📂 Project Structure
 
-index.html # Main website file
-style.css # Custom styles
-.gitignore # Ignore venv and other temp files
-README.md # This file
+- index.html # Main website file
+- style.css # Custom styles
+- .gitignore # Ignore venv and other temp files
+- README.md # This file
 
 
 ## 📝 Future Improvements
@@ -36,8 +36,7 @@ README.md # This file
 
 ## 🧑‍💻 Author
 
-Built by [Parth Bisht] for the Vapi Build Challenge 2025.
+Built by Parth Bisht for the Vapi Build Challenge 2025.
 
 ---
 
-*Made with ❤️ and Vapi AI*
