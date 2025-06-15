@@ -12,8 +12,7 @@ Talk2Me AI is an empathetic, AI-powered web voice assistant designed to help use
 
 ## 🚀 Live Demo
 
-👉 [Try the live site here!](https://your-site-name.netlify.app)  
-👉 [Talk to the agent directly on Vapi.ai](https://vapi.ai?demo=true&shareKey=YOUR_PUBLIC_KEY&assistantId=YOUR_ASSISTANT_ID)
+👉 [Try the live site here!](https://talk2me-ai.netlify.app/)  
 
 ## 🛠️ How It Works
 
