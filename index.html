@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Talk2Me AI – Healing Voice Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hero-bg">
+    <div class="container">
+      <header>
+        <h1>💬 Talk2Me AI</h1>
+        <p class="subtitle">Your empathetic, AI-powered friend for heartbreak and healing.</p>
+      </header>
+      <main>
+        <section class="demo-section">
+          <h2>🌟 Try the Voice Agent</h2>
+          <div id="vapi-widget-placeholder"></div>
+          <p class="hint">Click the purple button to talk to the AI!</p>
+        </section>
+        <section class="features">
+          <h2>What Can Talk2Me AI Do?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>🎵 Music Therapy</h3>
+              <p>Get personalized, calming music recommendations when you need them most.</p>
+            </div>
+            <div class="feature-card">
+              <h3>🧘 Guided Exercises</h3>
+              <p>Practice mindfulness, breathing, and grounding exercises to feel better, fast.</p>
+            </div>
+            <div class="feature-card">
+              <h3>💡 Emotion Awareness</h3>
+              <p>AI that listens, detects your mood, and responds with empathy and care.</p>
+            </div>
+            <div class="feature-card">
+              <h3>🔒 Private & Secure</h3>
+              <p>Your voice and data are never stored—your healing journey is yours alone.</p>
+            </div>
+          </div>
+        </section>
+        <section class="demo-section">
+          <h2>Sample Video Recommendations</h2>
+          <ul class="video-list">
+            <li><a href="https://www.youtube.com/watch?v=2OEL4P1Rz04" target="_blank">Relaxing Piano Music</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZToicYcHIOU" target="_blank">Mindfulness Meditation</a></li>
+          </ul>
+          <h2>Sample Therapeutic Exercises</h2>
+          <ul class="exercise-list">
+            <li>Deep Breathing: Inhale for 4s, hold for 7s, exhale for 8s.</li>
+            <li>Body Scan: Tense and relax each muscle group from toes to head.</li>
+          </ul>
+        </section>
+        <section class="how-it-works">
+          <h2>How It Works</h2>
+          <ol>
+            <li>Click the voice button to start a chat with Talk2Me AI.</li>
+            <li>Share your feelings—no judgment, just support.</li>
+            <li>Get instant, empathetic responses, music, and exercises tailored to your mood.</li>
+          </ol>
+        </section>
+        <section class="cta">
+          <h2>Ready to Heal?</h2>
+          <a href="https://vapi.ai?demo=true&shareKey=3d89d7fc-5963-4142-871f-1025fffc6dda&assistantId=ff15b169-a8be-4dcd-aad1-6c8ff010158c" target="_blank" class="cta-btn">Try the Agent on Vapi.ai</a>
+        </section>
+      </main>
+      <footer>
+        <p>Made with ❤️ for the Vapi Build Challenge &mdash; 2025</p>
+      </footer>
+    </div>
+  </div>
+  <!-- Vapi Widget Script -->
+  <script>
+    var vapiInstance = null;
+    const assistant = "ff15b169-a8be-4dcd-aad1-6c8ff010158c"; 
+    const apiKey = "3d89d7fc-5963-4142-871f-1025fffc6dda"; 
+    const buttonConfig = {
+      position: "right",
+      variant: "round",
+      theme: "light",
+      width: "90px",
+      height: "90px",
+      idle: {
+        color: "#a78bfa",
+        type: "round",
+        title: "Talk to Me!",
+        subtitle: "Start Healing",
+        icon: "https://unpkg.com/lucide-static@0.321.0/icons/mic.svg"
+      },
+      loading: {
+        color: "#c4b5fd",
+        type: "round",
+        title: "Connecting...",
+        subtitle: "Please wait",
+        icon: "https://unpkg.com/lucide-static@0.321.0/icons/loader-2.svg"
+      },
+      active: {
+        color: "#6c47ff",
+        type: "round",
+        title: "Talking...",
+        subtitle: "End Session",
+        icon: "https://unpkg.com/lucide-static@0.321.0/icons/mic.svg"
+      }
+    };
+    (function (d, t) {
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+      g.defer = true;
+      g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function () {
+        vapiInstance = window.vapiSDK.run({
+          apiKey: apiKey,
+          assistant: assistant,
+          config: buttonConfig,
+        });
+      };
+    })(document, "script");
+  </script>
+</body>
+</html>
